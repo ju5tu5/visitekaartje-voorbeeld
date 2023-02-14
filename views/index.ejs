@@ -1,0 +1,11 @@
+<%- include('./partials/head') %>
+
+<article>
+  <img src="<%= member.avatar %>" alt="Avatar van <%= member.name %>" />
+  <div>
+    <h1><%= member.name %> <%= member.surname %></h1>
+    <%- member.bio.html %>
+  </div>
+</article>
+
+<%- include('./partials/foot') %>
