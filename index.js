@@ -35,10 +35,7 @@ app.post('/', function (request, response) {
   const url = 'https://whois.fdnd.nl/api/v1/shout'
 
   fetchJson(url, headers).then((data) => {
-    const url = 'https://whois.fdnd.nl/api/v1/member/justus-sturkenboom'
-    fetchJson(url).then((data) => {
-      response.render('index', data)
-    })
+    response.redirect(303, '/')
   })
 })
 
