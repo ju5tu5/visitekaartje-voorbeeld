@@ -8,4 +8,23 @@
   </div>
 </article>
 
+<% member.shouts.forEach(shout => { %>
+<section>
+  <h2><%= shout.author %></h2>
+  <p><%= shout.text %></p>
+</section>
+<% }) %>
+
+<form action="/" method="post">
+  <input type="hidden" name="id" id="id" value="<%= member.id %>" />
+
+  <label for="author">Auteur:</label>
+  <input type="text" name="author" id="author" />
+
+  <label for="text">Laat hier je shout achter:</label>
+  <textarea name="text" id="text" cols="30" rows="10"></textarea>
+
+  <input type="submit" value="Shout!" />
+</form>
+
 <%- include('./partials/foot') %>
